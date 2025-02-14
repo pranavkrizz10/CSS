@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head> 
+    <title> Personal Information</title>
+    <style>
+      body{
+        background-color: bisque;
+      }
+      h1{
+        color: rgb(0, 0, 0);
+        font-weight: bold;
+        font-style: italic;
+        text-decoration: underline;
+        margin-bottom: 50px;
+      }
+      h2{
+        text-align: left;
+        color: rgb(0, 0, 0);
+      }
+      h3{
+        margin-left: 65px;
+        text-align: left;
+        margin-bottom: 5px;
+        color: rgb(0, 0, 0);
+      }
+      .container{
+        display: grid;
+        place-items: center;
+      }
+      input, select{
+        width: 75%;
+        height: 25px;
+        border-radius: 4px;
+        margin:10px
+      }
+      input:hover, select:hover{
+        cursor: pointer;
+      }
+      form{
+        width: 500px;
+        text-align: center;
+        border-radius:10px;
+        padding:10px;
+        background-color: rgb(154, 179, 204);
+      }
+      .sub{
+        background-color: aquamarine;
+        border-radius: 8px;
+        border: 1px solid black;
+        width: 100px;
+        height:35px;
+        box-shadow: 2px 2px 1px rgb(0, 0, 0,50%);
+      }
+      .sub:hover{
+        cursor: pointer;
+        background-color: #1fa8ca;
+      }
+      .sub:active{
+        background-color: aquamarine;
+        border-radius: 8px;
+        width: 80px;
+        box-shadow: none;
+        transform: translate(2px,3px);
+      }
+      label{
+        text-align: left;
+        color:rgb(0, 0, 0);
+      }
+      .gender-female{
+        text-align: left;
+      }
+    </style>
+</head>
+<body>
+<div class="container">
+  <form>
+    <h1>Registration Slip</h1>
+    <h2>Enter your details:</h2>
+    <label for="fname"><h3> First Name:</h3></label>
+    <input type="text" id="fname" name="fname" required>
+    
+    <label for="lname"><h3>Last Name: </h3></label>
+    <input type="text" id="lname" name="lname" required>
+    
+    <p><h3>Gender</h3></p>
+    <label for="gender-male">Male</label>
+    <input type="radio" id="gender-male" name="gender" value="male" required>
+    <br>
+    <label for="gender-female">Female</label>
+    <input type="radio" id="gender-female" name="gender" value="female" required>
+    <br>
+    <label for="gender-other">Other</label>
+    <input type="radio" id="gender-other" name="gender" value="other" required>
+    
+    <br><br>
+    <label for="dob">Date of Birth:</label><br>
+    <input type="date" id="dob" name="dob" required><br>
+    
+    <label for="SOI"><h3>Subject of Interest:</h3></label>
+    <select id="SOI" name="SOI" required>
+      <option value="math">Math</option>
+      <option value="physics">Physics</option>
+      <option value="chemistry">Chemistry</option>
+      <option value="cs">Computer Science</option>
+    </select>
+    
+    <label for="Language"><h3>Languages Known:</h3></label>
+    <input type="text" id="Language" name="Language" required>
+    
+    <label for="contact"><h3>Contact Number: </h3></label>
+    <input type="text" id="contact" name="contact" required>
+    
+    <label for="Pincode"><h3>Pin Code:</h3></label>
+    <input type="text" id="Pincode" name="Pincode" required>
+    
+    <label for="State"><h3>State: </h3></label>
+    <input type="text" id="State" name="State" required>
+    
+    <label for="Country"><h3>Country:</h3></label>
+    <input type="text" id="country" name="country" required>
+    
+    <br><br>
+    <input class="sub" type="submit" value="Submit">
+    <input class="sub" type="submit" value="Reset">
+  </form>
+</div>
+</body>
+</html>
