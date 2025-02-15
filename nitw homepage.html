@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NIT Warangal</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background: #003366;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav {
+        background: #0055A4;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        padding: 10px;
+        transition: background 0.3s, transform 0.3s;
+      }
+
+      nav a:hover {
+        background: #003366;
+        transform: scale(1.1);
+        border-radius: 5px;
+      }
+
+      .marquee {
+        background: #FFC107;
+        padding: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      .slider-container {
+        position: relative;
+        width: 100%;
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+      }
+
+      .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+      }
+
+      .slides img {
+        width: 100%;
+        height: 300px;
+      }
+
+      .prev,
+      .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        cursor: pointer;
+        padding: 10px;
+      }
+
+      .prev {
+        left: 10px;
+      }
+
+      .next {
+        right: 10px;
+      }
+
+      .news-events-container {
+        display: flex;
+        justify-content: space-around;
+        padding: 20px;
+      }
+
+      .news-section,
+      .awards-section,
+      .seminars-section {
+        width: 30%;
+        background: #f9f9f9;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .news-item,
+      .award-item,
+      .seminar-item {
+        margin-bottom: 15px;
+        padding: 10px;
+        background: white;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      }
+
+      .news-item h3,
+      .award-item h3,
+      .seminar-item h3 {
+        color: #d60000;
+        margin-bottom: 5px;
+      }
+
+      .news-item p,
+      .award-item p,
+      .seminar-item p {
+        font-size: 14px;
+        color: #333;
+      }
+
+      .campus-life {
+        padding: 20px;
+      }
+
+      .campus-image {
+        display: inline-block;
+        width: 30%;
+        margin: 1%;
+        text-align: center;
+        overflow: hidden;
+        border-radius: 10px;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .campus-image img {
+        width: 100%;
+        height: 200px;
+        transition: transform 0.3s;
+      }
+
+      .campus-image:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      }
+
+      .campus-image:hover img {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRP0i9PF6eQfeSaqPoGzaYwnS7Ze9SqZzKzIg&s" alt="NIT Warangal Logo" width="100">
+      <h1>National Institute of Technology, Warangal</h1>
+    </header>
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Academics</a>
+      <a href="#">Admissions</a>
+      <a href="#">Research</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="marquee">
+      <marquee>Important Announcements: Admissions Open | Upcoming Conference | Placement Drive 2025</marquee>
+    </div>
+    <div class="slider-container">
+      <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+      <div class="slides">
+        <img src="https://nitw.ac.in/api/static/files/Alumni_Association%E2%80%99s_Meet_2025-1-8-15-56-40.jpg" alt="Campus Image 1">
+        <img src="https://nitw.ac.in/api/static/files/ayodhya_banner_revised_2025-1-7-16-54-27.jpg" alt="Campus Image 2">
+        <img src="https://media.collegedekho.com/media/uploads/2023/10/18/nit-warangal-campus.jpg" alt="Campus Image 3">
+      </div>
+      <button class="next" onclick="moveSlide(1)">&#10095;</button>
+    </div>
+    <div class="news-events-container">
+      <div class="news-section">
+        <h2>Upcoming Events</h2>
+        <div class="news-item">
+          <h3>GIAN Course</h3>
+          <p>Non-invasive Fault Diagnosis of Propulsion Motors used in Electric Vehicles (Feb 17-21, 2025)</p>
+          <a href="#">Click here for more details</a>
+        </div>
+      </div>
+      <div class="awards-section">
+        <h2>Awards and Recognition</h2>
+        <div class="award-item">
+          <h3>Prof. Manjaiaj M</h3>
+          <p>Financial grant to attend the Fraunhofer Direct Digital Manufacturing Conference DDMC, Germany (March 12-13, 2025)</p>
+        </div>
+      </div>
+      <div class="seminars-section">
+        <h2>Seminars</h2>
+        <div class="seminar-item">
+          <h3>Ms. Sresta Valasa</h3>
+          <p>Design and Reliability of Negative Capacitance Multi-Gate FETs for Next-Generation Electronics (Feb 12, 2025, 11:00 AM)</p>
+          <button>Abstract</button>
+        </div>
+      </div>
+    </div>
+    <div class="campus-life">
+      <h2>Campus Life</h2>
+      <div class="campus-image">
+        <img src="https://image-static.collegedunia.com/public/college_data/images/appImage/15075391911443173798NITWNew.jpg?h=260&w=360&mode=crop" alt="Campus Life 1">
+      </div>
+      <div class="campus-image">
+        <img src="https://media.collegedekho.com/media/uploads/2023/10/18/nit-warangal-campus.jpg" alt="Campus Life 2">
+      </div>
+      <div class="campus-image">
+        <img src="https://images.odishatv.in/uploadimage/library/16_9/16_9_5/IMAGE_1673156698.webp" alt="Campus Life 3">
+      </div>
+    </div>
+    <script>
+      let index = 0;
+
+      function moveSlide(step) {
+        const slides = document.querySelector('.slides');
+        const images = document.querySelectorAll('.slides img');
+        index = (index + step + images.length) % images.length;
+        slides.style.transform = `translateX(${-index * 100}%)`;
+      }
+    </script>
+  </body>
+</html>
