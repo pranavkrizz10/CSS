@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Healthy Recipes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            text-align: center;
+        }
+        h1 {
+            background-color: bisque;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h3 {
+            color: #333;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .topnav a {
+            float: middle;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+            transition: all 0.3s ease;
+        }
+        .topnav a:hover {
+            background-color: #83b6f8;
+            color: black;
+            transform: scale(1.1);
+        }
+        .topnav a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+        .container {
+            padding: 50px;
+        }
+        .button {
+            background-color: #04AA6D;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .button:hover {
+            background-color: #028a57;
+            transform: translateY(-2px);
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 30px;
+        }
+        .gallery img {
+            width: 300px;
+            height: 200px;
+            margin: 10px;
+            border-radius: 10px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .gallery img:hover {
+            transform: scale(1.1);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="healthy_recipes.html">Home</a>
+        <a href="breakfast.html">Breakfast</a>
+        <a href="lunch.html">Lunch</a>
+        <a href="dinner.html">Dinner</a>
+    </div>
+    
+    <div class="container">
+        <h1>Welcome to the Land of Health!</h1>
+        <h3>Are you looking for delicious and nutritious meals?</h3>
+        <h3>Navigate to the breakfast, lunch, or dinner tabs to explore a variety of healthy recipes!</h3>
+        <p>Eating healthy doesn’t have to be boring! Discover amazing recipes that are both tasty and nourishing for your body.</p>
+        <p>From quick breakfast options to satisfying dinners, we have something for everyone.</p>
+        <button class="button" onclick="location.href='breakfast.html'">Get Started</button>
+    </div>
+
+    <div class="gallery">
+        <img src="https://www.indianveggiedelight.com/wp-content/uploads/2019/07/veg-pulao-featured.jpg" alt="Veg Pulao">
+        <img src="https://media.istockphoto.com/id/1145169012/photo/many-idli-or-idly-and-coconut-chutney-south-indian-breakfast.jpg?s=612x612&w=0&k=20&c=eaGheWxdd81VAxCdpaBaM9BV4-3601dJ-8gr9yP1B4A=" alt="Idli">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQl1OMTL_NxqnesIEzXosZ9S6nrKUhELm4qug&s" alt="Curd Rice">
+        <img src="https://t3.ftcdn.net/jpg/09/45/46/72/360_F_945467264_13rCx2nGR9wb9wrVt2g2FEFB4tE4b8sW.jpg" alt="Aloo Paratha">
+        <img src="https://media.istockphoto.com/id/909906350/photo/masala-dosa-south-indian-food.jpg?s=612x612&w=0&k=20&c=3CI-bw2NhYaX_t0-CZIXIIXsOygFcUaoGSmzbnVB-fU=" alt="Dosa">
+    </div>
+</body>
+</html>
