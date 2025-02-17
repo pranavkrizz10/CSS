@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: url(https://image-tc.galaxy.tf/wijpeg-4unbvkgdsxckbiqd2l3ukpjdb/warwick-new-york-front-view.jpg) no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .navbar {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #ffee06; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: none; 
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000; 
+            font-weight: normal; 
+            font-size: 16px; 
+            letter-spacing: 0; 
+            transition: none; 
+        }
+
+        .navbar a:hover {
+            color: #d40b0b; 
+            transform: none; 
+        }
+
+        .booking-form {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+            width: 250px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .booking-form h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .booking-form input, .booking-form select {
+            width: 100%; 
+            padding: 8px;
+            margin: 6px 0;
+            border-radius: 5px;
+            border: 1px solid #000; 
+            box-sizing: border-box;
+        }
+
+        .booking-form button {
+            background-color: #000;
+            color: white;
+            border: 1px solid #000; 
+            padding: 8px 14px; 
+            font-size: 14px; 
+            cursor: pointer;
+            border-radius: 5px; 
+            width: 100%;
+        }
+
+        .booking-form button:hover {
+            background-color: #db1212; 
+        }
+    </style>
+    <title>Hotel Booking in New York</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="homepage.html">Home</a>
+        <a href="heritage.html" target="_blank">Heritage</a>
+        <a href="hotelbooking.html" target="_blank">Hotel Booking</a>
+        <a href="gallery.html" target="_blank">Gallery</a>
+    </div>
+
+    <div class="booking-form">
+        <h2>Book Your Hotel</h2>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" required>
+            
+            <label for="hotel">Hotel:</label>
+            <select id="hotel" name="hotel">
+                <option value="hotel1">Hotel 1</option>
+                <option value="hotel2">Hotel 2</option>
+                <option value="hotel3">Hotel 3</option>
+            </select>
+            
+            <label for="checkin">Check-in Date:</label>
+            <input type="date" id="checkin" name="checkin" required>
+            
+            <label for="checkout">Check-out Date:</label>
+            <input type="date" id="checkout" name="checkout" required>
+            
+            <button type="submit">Book Now</button>
+        </form>
+    </div>
+</body>
+</html>

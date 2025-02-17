@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        :root {
+            --primary-color: #003366;
+            --hover-color: #ff6600;
+            --text-color: white;
+            --bg-light: rgba(255, 238, 0, 0.8);
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        .navbar {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: var(--bg-light);
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 10px 0;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .navbar a:hover {
+            color: var(--hover-color);
+            transform: scale(1.1);
+        }
+
+        .hero {
+            text-align: center;
+            padding-top: 80px;
+            margin-bottom: 0px;
+        }
+
+        h1 {
+            font-size: 35px;
+            font-family: sans-serif;
+            text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+            color: var(--primary-color);
+        }
+
+        .image-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .image-grid img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+            transition: 0.3s;
+            filter: grayscale(30%);
+        }
+
+        .image-grid img:hover {
+            transform: scale(1.05);
+            filter: brightness(110%) sepia(20%);
+        }
+
+        .content {
+            text-align: center;
+            padding: 40px 20px 20px;
+            color: #000;
+        }
+
+        body{
+            background-color: antiquewhite;
+        }
+    </style>
+    <title>Heritage Sites in New York</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="homepage.html">Home</a>
+        <a href="heritage.html">Heritage</a>
+        <a href="hotelbooking.html">Hotel Booking</a>
+        <a href="gallery.html">Gallery</a>
+    </div>
+
+    <div class="hero">
+        <h1>Explore Heritage Sites in New York</h1>
+    </div>
+
+    <div class="content">
+        <p>New York is not only about skyscrapers and modern life but also about rich history and heritage. Here are some notable heritage sites:</p>
+
+        <h2>Famous Heritage Sites:</h2>
+        <ul>
+            <li>Statue of Liberty</li>
+            <li>Ellis Island</li>
+            <li>Empire State Building</li>
+            <li>Central Park</li>
+            <li>Brooklyn Bridge</li>
+            <li>Metropolitan Museum of Art</li>
+        </ul>
+    </div>
+
+    <div class="image-grid">
+        <div>
+            <h3>Ellis Island</h3>
+            <a href="ellis_island.html"><img src="https://www.tripsavvy.com/thmb/ozIK6ufqLdepR35TCvr6Qu45SuU=/5607x3740/filters:no_upscale():max_bytes(150000):strip_icc()/aerial-view-of-ellis-island-86483639-5888f3a63df78caebc66bb6e.jpg" alt="Ellis Island"></a>
+        </div>
+        <div>
+            <h3>Empire State Building</h3>
+            <a href="empire_state.html"><img src="https://th.bing.com/th/id/OIP.k26JaY_NkKDvo1hLCAUC1AHaJ4?rs=1&pid=ImgDetMain" alt="Empire State Building"></a>
+        </div>
+        <div>
+            <h3>Central Park</h3>
+            <a href="central_park.html"><img src="https://th.bing.com/th/id/OLC.99wWcZIEalPVBQ480x360?&rs=1&pid=ImgDetMain" alt="Central Park"></a>
+        </div>
+        <div>
+            <h3>Brooklyn Bridge</h3>
+            <a href="brooklyn_bridge.html"><img src="https://images.pexels.com/photos/236451/pexels-photo-236451.jpeg?cs=srgb&dl=architecture-bridge-brooklyn-bridge-city-236451.jpg&fm=jpg" alt="Brooklyn Bridge"></a>
+        </div>
+        <div>
+            <h3>Metropolitan Museum of Art</h3>
+            <a href="metropolitan.html"><img src="https://news.artnet.com/app/news-upload/2017/09/metropolitan-museum-of-art-754843_1920.jpg" alt="Metropolitan Museum of Art"></a>
+        </div>
+    </div>
+</body>
+</html>

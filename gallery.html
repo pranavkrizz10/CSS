@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: rgb(230, 137, 15);
+            background: url('https://media.gettyimages.com/id/1347979016/photo/aerial-view-of-new-york-city-skyline-with-central-park-and-manhattan-usa.jpg?s=612x612&w=gi&k=20&c=AXXhI67qz4cEi7ZNfLeIVrz9uNhDgLaC9sSp4FeqAFg=') no-repeat center center/cover;
+        }
+
+        .navbar {
+            height: 60px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            background-color: #fbff00;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 10;
+            padding: 10px 0;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #000000;
+            font-weight: normal;
+            font-size: 16px;
+        }
+
+        .navbar a:hover {
+            color: #ce1515;
+        }
+
+        .content {
+            position: relative;
+            z-index: 2;
+            color: rgb(0, 0, 0);
+            padding: 50px 10px;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 30px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 30px;
+            margin: 40px auto;
+            padding: 20px;
+            max-width: 90%;
+        }
+
+        .gallery img {
+            width: 100%;
+            height: 250px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease;
+            object-fit: cover;
+        }
+
+        .gallery img:hover {
+            transform: scale(1.05);
+        }
+    </style>
+    <title>Gallery</title>
+</head>
+<body>
+    <div class="navbar">
+        <a href="homepage.html">Home</a>
+        <a href="heritage.html" target="_blank">Heritage</a>
+        <a href="hotelbooking.html" target="_blank">Hotel Booking</a>
+        <a href="gallery.html" target="_blank">Gallery</a>
+    </div>
+
+    <div class="content">
+        <h1>New York Gallery</h1>
+        <p>Explore the beauty of New York through these images.</p>
+
+        <div class="gallery">
+            <img src="https://wallpaperaccess.com/full/1211839.jpg" alt="New York Image 1">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2-Ww6eEgcmEI9VHhlhzA1BlayN2qyLOXQJg&s" alt="New York Image 2">
+            <img src="https://th.bing.com/th/id/OIP.8gJo8XKjPxFCSkb13kKfDQHaE8" alt="New York Image 3">
+            <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2020/04/29/11/istock-623595614.jpg" alt="New York Image 4">
+            <img src="https://i0.wp.com/discovernyc.tours/wp-content/uploads/2021/10/shutterstock_221032825_657184472576.jpg?fit=4500%2C3000&ssl=1" alt="New York Image 5">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTwgaN0BzjRjxkLWSE6P_o4nUtnxV7dwIA3wg&s" alt="New York Image 6">
+            <img src="https://www.holidayhypermarket.co.uk/wp-content/uploads/2019/04/HH_NEWYORK_shutterstock_1740358463.png" alt="New York Image 7">
+            <img src="https://media.nomadicmatt.com/2022/newnycguidemain.jpeg" alt="New York Image 8">
+            <img src="https://res.klook.com/image/upload/Mobile/City/szhx3ytpgfnhpbmsngk0.jpg" alt="New York Image 9">
+            <img src="https://www.travelandleisure.com/thmb/91pb8LbDAUwUN_11wATYjx5oF8Q=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/new-york-city-evening-NYCTG0221-52492d6ccab44f328a1c89f41ac02aea.jpg" alt="New York Image 10">
+            <img src="https://media.cnn.com/api/v1/images/stellar/prod/210324101707-01-roosevelt-island-new-york.jpg?q=x_4,y_0,h_2242,w_3984,c_crop/h_720,w_1280" alt="New York Image 11">
+        </div>
+    </div>
+</body>
+</html>
