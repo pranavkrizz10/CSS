@@ -100,11 +100,12 @@
         btn.addEventListener('click', (e) => {
             e.preventDefault(); 
             let movieName = display.value.trim();
-            tot++;
-            let total=document.getElementById('total');
-            total.innerHTML='Total Movies:'+ tot;
+            
 
             if (movieName) {
+                tot++;
+            let total=document.getElementById('total');
+            total.innerHTML='Total Movies:'+ tot;
                 let li = document.createElement('li');
                 li.textContent = movieName;
                 addedMoviesList.appendChild(li);
