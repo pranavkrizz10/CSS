@@ -17,10 +17,10 @@
             display: inline-block;
             border-radius: 20px;
             width:250px;
-            height: 350px;
+            height: 400px;
             background-color: rgb(0, 0, 0);
         }
-        .display{
+        #display{
             margin-left: 9px;
             margin-right: 5px;
             margin-bottom: 10px;
@@ -81,13 +81,17 @@
             text-align: center;
             font: arial;
         }
+
+        .AC{
+            width: 100px;
+        }
     </style>
 </head>
 <body>
     <div class="container">    
         <div class="calculator">
             <h1>Calculator</h1>
-            <input type="text" placeholder="eg: 5+5" class="display" >
+            <input type="text" placeholder="eg: 5+5" id="display" readonly >
             <div class="buttons">
                 <button class="btn">7</button>
                 <button class="btn">8</button>
@@ -105,8 +109,28 @@
                 <button class="btn">.</button>
                 <button class="btn equal">=</button>
                 <button class="btn-operator">+</button>
+                <button class="btn">AC</button>
             </div>
         </div>
     </div>
+
+    <script>
+        let display = document.getElementById('display');
+let buttons = document.querySelectorAll('.btn, .btn-operator'); // Select all buttons (including operators)
+
+buttons.forEach(button => {
+    button.addEventListener('click', (e) => {
+        if (e.target.innerHTML === '=') {
+            display.value = eval(display.value);
+        } else if (e.target.innerHTML === 'AC') {
+            display.value = '';
+        } else {
+            display.value += e.target.innerHTML;
+        }
+    });
+});
+
+    </script>
+
 </body>
 </html>
