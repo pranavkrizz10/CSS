@@ -1,0 +1,124 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies List</title>
+
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(to right, rgb(116, 116, 114), rgb(0, 0, 0));
+        }
+        label {
+            display: block;
+            font-size: 40px;
+            margin-bottom: 15px;
+            margin-left: 49px;
+        }
+
+        #inp {
+            width: 100%;
+            height: 30px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            border: 1px solid black;
+        }
+
+        #button, #clear-button {
+            width: 100%;
+            height: 25px;
+            border-radius: 12px;
+            background-color: rgb(255, 205, 130);
+            border: 1px solid black;
+        }
+
+        #button:hover, #clear-button:hover {
+            background-color: rgb(255, 223, 177);
+        }
+
+        .container {
+            display: flex;
+            border-radius: 15px;
+            justify-content: center;
+            background-color: rgb(55, 237, 243);
+            width: 500px;
+            height: 400px;
+            flex-direction: column;
+            padding: 20px;
+        }
+
+        #added-movies ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #clear-button{
+            margin-top: 15px;
+        }
+
+        #added-movies li {
+            background-color: #41ca48;
+            padding: 5px;
+            margin: 5px 0;
+            border-radius: 5px;
+        }
+
+        .movies-list{
+            font-size: 18px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="" class="movie">
+            <label for="inp">Movies</label>
+            <input type="text" id="inp" placeholder="Enter movie">
+            <button type="submit" id="button">Add Movie</button>
+            <button type="button" id="clear-button">Clear List</button>
+            <div id="added-movies">
+                <p class="movies-list">Movies list:</p>
+                <ul>
+                    
+                </ul>
+            </div>
+
+            <h4 id="total"> Total Movies: </h4>
+        </form>
+    </div>
+    
+    <script>
+        let display = document.getElementById('inp');
+        let addedMoviesList = document.querySelector('#added-movies ul');
+        let btn = document.getElementById("button");
+        let clear=document.getElementById('clear-button')
+
+        let tot=0;
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            let movieName = display.value.trim();
+            tot++;
+            let total=document.getElementById('total');
+            total.innerHTML='Total Movies:'+ tot;
+
+            if (movieName) {
+                let li = document.createElement('li');
+                li.textContent = movieName;
+                addedMoviesList.appendChild(li);
+                display.value = '';
+            }
+        });
+
+        clear.addEventListener('click',(e)=>{
+            addedMoviesList.innerHTML='';
+            tot=0;
+            let total=document.getElementById('total');
+            total.innerHTML='Total Movies:'+tot;
+        })
+        console.log(tot);
+    </script>
+</body>
+</html>
