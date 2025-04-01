@@ -1,0 +1,805 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OdorZap Jello - The Future of Fresh Breath</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --primary: #e20000;
+            --secondary: #add895;
+            --dark: #333;
+            --light: #f9f9f9;
+            --accent: #791729;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            margin-right: 10px;
+            color: var(--secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 2rem;
+        }
+        
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-links a:hover {
+            color: var(--secondary);
+        }
+        
+    
+    .hero {
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        background: url('https://your-image-host.com/Screenshot-2025-04-01-233306.png') no-repeat center center/cover;
+        position: relative;
+        color: rgb(0, 0, 0);
+        text-align: center;
+        padding-top: 80px;
+    }
+    
+
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(122, 115, 115, 0.844);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary);
+            color: white;
+            padding: 0.8rem 2rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            text-decoration: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        
+        .btn:hover {
+            background: #e68a00;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-primary {
+            background: var(--primary);
+        }
+        
+        .btn-primary:hover {
+            background: #3e8e41;
+        }
+        
+        section {
+            padding: 5rem 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .section-title p {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+        }
+        
+        .problem-section {
+            background-color: #f1f1f1;
+        }
+        
+        .problem-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+        
+        .problem-card {
+            flex: 1 1 300px;
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .problem-card i {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .problem-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .solution-section {
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            color: white;
+        }
+        
+        .solution-content {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 3rem;
+        }
+        
+        .solution-text {
+            flex: 1 1 400px;
+        }
+        
+        .solution-text h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .solution-text p {
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .solution-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        
+        .feature {
+            flex: 1 1 200px;
+            background: rgba(255,255,255,0.1);
+            padding: 1.5rem;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
+        }
+        
+        .feature i {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: var(--secondary);
+        }
+        
+        .feature h3 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .solution-image {
+            flex: 1 1 400px;
+            text-align: center;
+        }
+        
+        .solution-image img {
+            max-width: 100%;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        
+        .use-cases {
+            background-color: white;
+        }
+        
+        .use-cases-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        
+        .use-case {
+            flex: 1 1 300px;
+            background: var(--light);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            transition: transform 0.3s ease;
+        }
+        
+        .use-case:hover {
+            transform: translateY(-10px);
+        }
+        
+        .use-case img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        
+        .use-case-content {
+            padding: 1.5rem;
+        }
+        
+        .use-case h3 {
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary);
+        }
+        
+        .how-it-works {
+            background-color: #f9f9f9;
+        }
+        
+        .steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+        
+        .step {
+            flex: 1 1 250px;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+        }
+        
+        .step-number {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .step h3 {
+            margin-bottom: 1rem;
+            color: var(--dark);
+        }
+        
+        .market-section {
+            background: linear-gradient(135deg, #2196F3, #00BCD4);
+            color: white;
+            text-align: center;
+            padding: 5rem 0;
+        }
+        
+        .market-stat {
+            font-size: 5rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .market-text {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: 1.2rem;
+        }
+        
+        .comparison {
+            background-color: white;
+            padding: 5rem 0;
+        }
+        
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 2rem;
+        }
+        
+        .comparison-table th, .comparison-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .comparison-table th {
+            background-color: var(--primary);
+            color: white;
+        }
+        
+        .comparison-table tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        
+        .comparison-table td:first-child {
+            font-weight: bold;
+        }
+        
+        .check {
+            color: var(--primary);
+            font-weight: bold;
+        }
+        
+        .x-mark {
+            color: #f44336;
+            font-weight: bold;
+        }
+        
+        footer {
+            background-color: var(--dark);
+            color: white;
+            padding: 3rem 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+        
+        .footer-section {
+            flex: 1 1 250px;
+        }
+        
+        .footer-section h3 {
+            margin-bottom: 1.5rem;
+            color: var(--secondary);
+        }
+        
+        .footer-section ul {
+            list-style: none;
+        }
+        
+        .footer-section ul li {
+            margin-bottom: 0.5rem;
+        }
+        
+        .footer-section ul li a {
+            color: #ccc;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .footer-section ul li a:hover {
+            color: var(--secondary);
+        }
+        
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        
+        .social-icons a {
+            color: white;
+            background: rgba(255,255,255,0.1);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--secondary);
+            transform: translateY(-3px);
+        }
+        
+        .copyright {
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .nav-links {
+                display: none;
+            }
+            
+            .solution-content, .problem-container {
+                flex-direction: column;
+            }
+            
+            .market-stat {
+                font-size: 3rem;
+            }
+        }
+
+        html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-margin-top: 80px; /* Accounts for fixed header height */
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <i class="fas fa-leaf"></i>
+                    <span>OdorZap</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#problem">The Problem</a></li>
+                    <li><a href="#solution">The Solution</a></li>
+                    <li><a href="#use-cases">Use Cases</a></li>
+                    <li><a href="#how-it-works">How It Works</a></li>
+                    <li><a href="#market">Market</a></li>
+                    <li><a href="#comparison">Comparison</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Future of Fresh Breath</h1>
+            <p>OdorZap Jello is a revolutionary, edible jelly that neutralizes bad breath in just 30 seconds. Portable, organic, and incredibly effective.</p>
+            <a href="#solution" class="btn">Learn More</a>
+            <a href="#" class="btn btn-primary">Pre-Order Now</a>
+        </div>
+    </section>
+
+    <section id="problem" class="problem-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Problem: Bad Breath Kills Confidence</h2>
+                <p>Traditional solutions fall short when it comes to truly fresh breath in social and professional situations.</p>
+            </div>
+            <div class="problem-container">
+                <div class="problem-card">
+                    <i class="fas fa-comment-slash"></i>
+                    <h3>Social Anxiety</h3>
+                    <p>Uncomfortable interactions due to strong-smelling foods or dry mouth can ruin important moments.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-mask"></i>
+                    <h3>Masking Isn't Enough</h3>
+                    <p>Gum and mints only cover up odors temporarily without addressing the root cause.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="fas fa-toiletries"></i>
+                    <h3>Impractical Solutions</h3>
+                    <p>Mouthwash isn't portable and brushing isn't always an option when you're on the go.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solution" class="solution-section">
+        <div class="container">
+            <div class="solution-content">
+                <div class="solution-text">
+                    <h2>The Solution: OdorZap Jello</h2>
+                    <p>Our revolutionary edible jelly doesn't just mask odors - it neutralizes them in just 30 seconds. Organic, hydrating, and available in delicious flavors.</p>
+                    <p>Unlike traditional solutions, OdorZap Jello provides lasting freshness without artificial chemicals or alcohol.</p>
+                    <div class="solution-features">
+                        <div class="feature">
+                            <i class="fas fa-bolt"></i>
+                            <h3>Fast-Acting</h3>
+                            <p>Works in just 30 seconds</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-leaf"></i>
+                            <h3>Organic</h3>
+                            <p>No artificial chemicals</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-tint"></i>
+                            <h3>Hydrating</h3>
+                            <p>Moisturizes your mouth</p>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-briefcase"></i>
+                            <h3>Portable</h3>
+                            <p>Single-serve sachets</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="solution-image">
+                    <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="OdorZap Jello product">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="use-cases" class="use-cases">
+        <div class="container">
+            <div class="section-title">
+                <h2>Perfect For These Moments</h2>
+                <p>OdorZap Jello fits seamlessly into your daily life, ensuring fresh breath when it matters most.</p>
+            </div>
+            <div class="use-cases-container">
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1521791055366-0d553872125f?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Business meeting">
+                    <div class="use-case-content">
+                        <h3>Business Meetings</h3>
+                        <p>Freshen up instantly after lunch before an important pitch or negotiation.</p>
+                    </div>
+                </div>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1516589178581-6cd7833ae3b2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="First date">
+                    <div class="use-case-content">
+                        <h3>First Dates</h3>
+                        <p>Eliminate garlic or onion breath and approach with confidence.</p>
+                    </div>
+                </div>
+                <div class="use-case">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="Coffee break">
+                    <div class="use-case-content">
+                        <h3>Coffee Breaks</h3>
+                        <p>Prevent bitter coffee breath before your next interview or meeting.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>How OdorZap Jello Works</h2>
+                <p>Our dual-action formula neutralizes odors while providing lasting freshness.</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Open Sachet</h3>
+                    <p>Simply tear open the convenient single-serve package.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Consume Jelly</h3>
+                    <p>Eat the delicious jelly - no water needed.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Let It Work</h3>
+                    <p>Allow 30 seconds for the formula to neutralize odors.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Enjoy Freshness</h3>
+                    <p>Experience long-lasting fresh breath with no residue.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="market" class="market-section">
+        <div class="container">
+            <div class="market-stat">$XXB</div>
+            <h2>Multi-Billion Dollar Market Potential</h2>
+            <p class="market-text">The oral hygiene market is massive, but traditional products lack the instant effectiveness and hydration benefits that OdorZap Jello provides. We're filling a crucial gap in the market with our innovative solution.</p>
+        </div>
+    </section>
+
+    <section id="comparison" class="comparison">
+        <div class="container">
+            <div class="section-title">
+                <h2>Why OdorZap Beats the Competition</h2>
+                <p>Traditional breath fresheners can't match our innovative approach.</p>
+            </div>
+            <table class="comparison-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>OdorZap Jello</th>
+                        <th>Mints</th>
+                        <th>Gum</th>
+                        <th>Mouthwash</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Neutralizes Odors</td>
+                        <td class="check">Yes</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                        <td class="check">Yes</td>
+                    </tr>
+                    <tr>
+                        <td>Portable</td>
+                        <td class="check">Yes</td>
+                        <td class="check">Yes</td>
+                        <td class="check">Yes</td>
+                        <td class="x-mark">No</td>
+                    </tr>
+                    <tr>
+                        <td>Hydrating</td>
+                        <td class="check">Yes</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                    </tr>
+                    <tr>
+                        <td>Organic Ingredients</td>
+                        <td class="check">Yes</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                    </tr>
+                    <tr>
+                        <td>Works in 30 Seconds</td>
+                        <td class="check">Yes</td>
+                        <td class="x-mark">No</td>
+                        <td class="x-mark">No</td>
+                        <td class="check">Yes</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OdorZap</h3>
+                    <p>The future of fresh breath. Revolutionary, convenient, and effective.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#problem">The Problem</a></li>
+                        <li><a href="#solution">Our Solution</a></li>
+                        <li><a href="#use-cases">Use Cases</a></li>
+                        <li><a href="#how-it-works">How It Works</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> info@odorzap.com</li>
+                        <li><i class="fas fa-phone"></i> (555) 123-4567</li>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Fresh St, Breathville</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe for updates and special offers.</p>
+                    <form>
+                        <input type="email" placeholder="Your Email" style="padding: 0.5rem; width: 100%; margin-bottom: 0.5rem;">
+                        <button type="submit" class="btn" style="width: 100%;">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 OdorZap Jello. All rights reserved.</p>
+            </div>
+        </div>
+
+        
+    </footer>
+
+    <script>
+        // Smooth scrolling for all links with hashes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80, // Adjusted for fixed header
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without jumping
+                    if (history.pushState) {
+                        history.pushState(null, null, targetId);
+                    } else {
+                        window.location.hash = targetId;
+                    }
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
